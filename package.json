@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "build": "tsc",
-  "run:cron": "ts-node src/scripts/generarResumenConduccion.ts"
+    "build": "tsc",
+    "start:cron": "node dist/scripts/generarResumenConduccion.js",
+    "run:cron": "ts-node src/scripts/generarResumenConduccion.ts"
   },
   "keywords": [],
   "author": "",

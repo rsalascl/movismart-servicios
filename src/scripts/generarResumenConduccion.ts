@@ -10,11 +10,14 @@ let fechaDesde: dayjs.Dayjs;
 let fechaHasta: dayjs.Dayjs;
 
 if (!argDesde) {
-  // 🕓 Modo 1: sin argumentos → usa el día anterior
+  // 🕓 Modo 1: sin argumentos → usa día anterior (desde) y día actual (hasta)
   const ayer = dayjs().subtract(1, 'day');
+  const hoy = dayjs();
   fechaDesde = ayer;
-  fechaHasta = ayer;
-  console.log(`[CRON] Modo automático: procesando fecha de ayer: ${ayer.format('YYYY-MM-DD')}`);
+  fechaHasta = hoy;
+  console.log(
+    `[CRON] Modo automático: procesando desde ${ayer.format('YYYY-MM-DD')} hasta ${hoy.format('YYYY-MM-DD')}`
+  );
 } else {
   // 📅 Modo 2: argumentos desde/hasta
   fechaDesde = dayjs(argDesde, 'YYYY-MM-DD', true);
