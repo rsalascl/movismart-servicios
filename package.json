@@ -1,0 +1,25 @@
+{
+  "name": "movismart-servicios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "build": "tsc",
+  "run:cron": "ts-node src/scripts/generarResumenConduccion.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
+    "lodash.groupby": "^4.6.0",
+    "mysql2": "^3.14.0"
+  },
+  "devDependencies": {
+    "@types/lodash.groupby": "^4.6.9",
+    "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
